@@ -1,0 +1,36 @@
+{
+    "name": "@cionzo/elint-config",
+    "version": "1.0.0",
+    "description": "My eslint configuration",
+    "main": "src/index.js",
+    "bin": {
+        "js-changelog": "./src/index.js"
+    },
+    "scripts": {
+        "test": "mocha",
+        "js-changelog": "npx @cionzo/js-changelog"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cionz0/eslint-config.git"
+    },
+    "keywords": [
+        "eslint",
+        "configuration",
+        "node",
+        "jsdoc"
+    ],
+    "author": "cionzo <cionzoh@gmail.com>",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/cionz0/eslint-config/issues"
+    },
+    "homepage": "https://github.com/cionz0/eslint-config#readme",
+    "install_from_git": "only",
+    "devDependencies": {
+        "@cionzo/js-changelog": "github:cionz0/js-changelog",
+        "@cionzo/package-json-to-readme": "github:cionz0/package-json-to-readme",
+        "eslint": "^8.48.0",
+        "jsdoc": "^4.0.2"
+    }
+}
