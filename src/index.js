@@ -107,7 +107,7 @@ if (require.main === module) {
     console.log("Updating package.json");
     const package_json_content = JSON.parse(fs.readFileSync("./package.json").toString())
     package_json_content.scripts = package_json_content.scripts || {}
-    package_json_content.scripts.lint = "\"eslint --fix\""
-    package_json_content.scripts.jdsoc = "\"jsdoc -o docs\""
+    package_json_content.scripts.lint = "eslint --fix"
+    package_json_content.scripts.jdsoc = "jsdoc -o docs"
     fs.writeFileSync("./package.json", JSON.stringify(package_json_content, undefined,4))
 }
