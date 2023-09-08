@@ -1,10 +1,10 @@
 {
-    "name": "@cionzo/elint-config",
+    "name": "@cionzo/eslint-config",
     "version": "1.0.0",
     "description": "My eslint configuration",
     "main": "src/index.js",
     "bin": {
-        "elint-config": "./src/index.js"
+        "eslint-config": "./src/index.js"
     },
     "scripts": {
         "test": "mocha",
