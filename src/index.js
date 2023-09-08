@@ -1,11 +1,11 @@
 /**
- * ESLint Configuration File
+ * ESLint Configuration File.
  *
  * This configuration enforces coding standards and best practices for JavaScript code.
  *
- * Created on: 08/09/23
- * @project eslint-config
+ * Created on: 08/09/23.
  * @module src/index
+ * @project eslint-config
  * @author cionzo <cionzo@filotrack.com>
  */
 
