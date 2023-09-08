@@ -101,7 +101,7 @@ module.exports = {
 if (require.main === module) {
     // Install ESLint and JSDoc as dev dependencies when executed.
     console.log("Installing ESLint as a development dependencies");
-    exec("npm install --save-dev eslint jsdoc");
+    exec("npm install --save-dev eslint jsdoc eslint-plugin-jsdoc@latest");
     console.log("Setting ./.eslint.js");
     fs.writeFileSync("./.eslint.js", "module.exports = require(\"@cionzo/eslint-config\")");
     console.log("Updating package.json");
