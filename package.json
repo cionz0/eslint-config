@@ -4,7 +4,7 @@
     "description": "My eslint configuration",
     "main": "src/index.js",
     "bin": {
-        "js-changelog": "./src/index.js"
+        "elint-config": "./src/index.js"
     },
     "scripts": {
         "test": "mocha",
