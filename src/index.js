@@ -15,6 +15,8 @@
 const fs = require("fs");
 const exec = require("child_process").exec;
 
+
+
 module.exports = {
     parserOptions: {
         ecmaVersion: 2020, // Set the ECMAScript version to 2020 (ES11).
@@ -24,17 +26,15 @@ module.exports = {
         node: true, // Enable Node.js environment.
     },
     extends: ["eslint:recommended"], // Extend ESLint with recommended rules.
-    plugins: ["jsdoc"], // Enable the JSDoc plugin for enforcing JSDoc comments.
+
 
     rules: {
         // Custom ESLint rules and overrides.
-
         "no-console": 0, // Allow the use of console.log (0: off, 1: warning, 2: error).
         "indent": ["error", 4, {"SwitchCase": 1}], // Enforce 4-space indentation.
         "quotes": ["error", "double"], // Enforce double quotes for strings.
         "max-len": [1, {code: 900}], // Set the maximum line length to 900 characters.
         "camelcase": [0], // Disable the camelCase rule.
-        "require-jsdoc": [1], // Require JSDoc comments (1: warning).
         "new-cap": [1], // Require constructor names to begin with a capital letter (1: warning).
         "no-invalid-this": [1], // Disallow the use of this outside of classes (1: warning).
         "no-undef": [1], // Disallow the use of undeclared variables (1: warning).
@@ -42,6 +42,8 @@ module.exports = {
         "guard-for-in": [1], // Require for...in loops to use hasOwnProperty (1: warning).
 
         // JSDoc rules (1: warning, 2: error).
+        "plugins": ["jsdoc"], // Enable the JSDoc plugin for enforcing JSDoc comments.
+        "require-jsdoc": [1], // Require JSDoc comments (1: warning).
 
         "jsdoc/check-access": 1, // Ensure JSDoc access tags (@private, @protected, etc.) are valid (1: warning).
         "jsdoc/check-alignment": 1, // Check the alignment of JSDoc comments (1: warning).
@@ -92,20 +94,20 @@ module.exports = {
 
     },
 
+
     ignorePatterns: ["test/*", "*/configs/jsdoc-template/*", "docs/jsdoc/*"], // Files to ignore during linting.
 };
 
 if (require.main === module) {
     // Install ESLint and JSDoc as dev dependencies when executed.
-    console.log("Installing ESLint and JSDoc as dev dependencies");
+    console.log("Installing ESLint as a development dependencies");
     exec("npm install --save-dev eslint jsdoc");
-    console.log("Setting ./.eslint.js");
     console.log("Setting ./.eslint.js");
     fs.writeFileSync("./.eslint.js", "module.exports = require(\"@cionzo/eslint-config\")");
     console.log("Updating package.json");
-    const package_json_content = fs.readFileSync("./package.json").toJSON()
+    const package_json_content = JSON.parse(fs.readFileSync("./package.json").toString())
     package_json_content.scripts = package_json_content.scripts || {}
-    package_json_content.scripts.lint = "\"npm run lint --fix\""
+    package_json_content.scripts.lint = "\"eslint --fix\""
     package_json_content.scripts.jdsoc = "\"npm run jsdoc\""
     fs.writeFileSync("./package.json", JSON.stringify(package_json_content))
 }
