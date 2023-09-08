@@ -99,5 +99,13 @@ if (require.main === module) {
     // Install ESLint and JSDoc as dev dependencies when executed.
     console.log("Installing ESLint and JSDoc as dev dependencies");
     exec("npm install --save-dev eslint jsdoc");
+    console.log("Setting ./.eslint.js");
+    console.log("Setting ./.eslint.js");
     fs.writeFileSync("./.eslint.js", "module.exports = require(\"@cionzo/eslint-config\")");
+    console.log("Updating package.json");
+    const package_json_content = fs.readFileSync("./package.json").toJSON()
+    package_json_content.scripts = package_json_content.scripts || {}
+    package_json_content.scripts.lint = "\"npm run lint --fix\""
+    package_json_content.scripts.jdsoc = "\"npm run jsdoc\""
+    fs.writeFileSync("./package.json", JSON.stringify(package_json_content))
 }
