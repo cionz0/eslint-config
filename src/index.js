@@ -27,7 +27,7 @@ module.exports = {
     },
     extends: ["eslint:recommended"], // Extend ESLint with recommended rules.
 
-
+    plugins: ["jsdoc"], // Enable the JSDoc plugin for enforcing JSDoc comments.
     rules: {
         // Custom ESLint rules and overrides.
         "no-console": 0, // Allow the use of console.log (0: off, 1: warning, 2: error).
@@ -42,7 +42,7 @@ module.exports = {
         "guard-for-in": [1], // Require for...in loops to use hasOwnProperty (1: warning).
 
         // JSDoc rules (1: warning, 2: error).
-        "plugins": ["jsdoc"], // Enable the JSDoc plugin for enforcing JSDoc comments.
+
         "require-jsdoc": [1], // Require JSDoc comments (1: warning).
 
         "jsdoc/check-access": 1, // Ensure JSDoc access tags (@private, @protected, etc.) are valid (1: warning).
