@@ -8,7 +8,8 @@
     },
     "scripts": {
         "test": "mocha",
-        "js-changelog": "npx @cionzo/js-changelog"
+        "js-changelog": "npx @cionzo/js-changelog",
+        "lint": "eslint --fix"
     },
     "repository": {
         "type": "git",
