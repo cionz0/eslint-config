@@ -99,15 +99,16 @@ module.exports = {
 };
 
 if (require.main === module) {
+    const config_file = ".eslint.js"
     // Install ESLint and JSDoc as dev dependencies when executed.
     console.log("Installing ESLint as a development dependencies");
     exec("npm install --save-dev eslint jsdoc eslint-plugin-jsdoc@latest");
-    console.log("Setting ./.eslint.js");
+    console.log(`Setting ./${config_file}`);
     fs.writeFileSync("./.eslint.js", "module.exports = require(\"@cionzo/eslint-config\")");
     console.log("Updating package.json");
     const package_json_content = JSON.parse(fs.readFileSync("./package.json").toString())
     package_json_content.scripts = package_json_content.scripts || {}
-    package_json_content.scripts.lint = "eslint --fix"
-    package_json_content.scripts.jdsoc = "jsdoc -d js_docs"
+    package_json_content.scripts.lint = `eslint -c ${config_file} --fix .`
+    package_json_content.scripts.jsdoc = "jsdoc -P package.json -d js_docs . "
     fs.writeFileSync("./package.json", JSON.stringify(package_json_content, undefined,4))
 }
