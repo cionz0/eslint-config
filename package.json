@@ -31,7 +31,8 @@
     "devDependencies": {
         "@cionzo/js-changelog": "github:cionz0/js-changelog",
         "@cionzo/package-json-to-readme": "github:cionz0/package-json-to-readme",
-        "eslint": "^8.48.0",
-        "jsdoc": "^4.0.2"
+        "eslint": "^9.2.0",
+        "eslint-plugin-jsdoc": "^48.2.3",
+        "jsdoc": "^4.0.3"
     }
 }
