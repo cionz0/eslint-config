@@ -11,7 +11,7 @@ npm install --save-dev git+https://github.com/cionz0/eslint-config
 ## Setup
 Again, from your `functions` folder, run:
 ```bash
-npx @cionzo/eslint-config:install
+npx @cionzo/eslint-config
 ```
 
 This will: 
