@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "description": "My eslint configuration",
     "type": "module",
-    "main": "src/index.js",
+    "main": "src/index.cjs",
     "bin": {
-        "eslint-config": "./src/index.js"
+        "eslint-config": "./src/index.cjs"
     },
     "scripts": {
         "test": "mocha",
