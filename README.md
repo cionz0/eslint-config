@@ -15,12 +15,12 @@ npx @cionzo/eslint-config
 ```
 
 This will: 
-- create `functions/.eslint.js`, and 
+- create `functions/eslint.config.mjs`, and 
 - update `functions/package.json`.
 
-**Don't forget** to add `.eslint.js` to your project repository, for example by running the following from your `functions`folder. 
+**Don't forget** to add `eslint.config.mjs` to your project repository, for example by running the following from your `functions`folder. 
 ```bash
-git add eslint.config.js
+git add eslint.config.mjs
 ```
 
 File `functions/package.json` will be updated as follows:
