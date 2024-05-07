@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "bin": {
         "eslint-config": "./src/eslint.config.mjs",
-        "eslint-config:install": "./src/index.js"
+        "install": "./src/index.js"
     },
     "scripts": {
         "test": "mocha",
