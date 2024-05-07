@@ -4,7 +4,8 @@
     "description": "My eslint configuration",
     "main": "src/index.js",
     "bin": {
-        "eslint-config": "./src/index.js"
+        "eslint-config": "./src/eslint.config.mjs",
+        "eslint-config:install": "./src/index.js"
     },
     "scripts": {
         "test": "mocha",
