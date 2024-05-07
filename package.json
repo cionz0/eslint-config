@@ -2,9 +2,9 @@
     "name": "@cionzo/eslint-config",
     "version": "1.0.0",
     "description": "My eslint configuration",
-    "main": "src/index.cjs",
+    "main": "src/index.js",
     "bin": {
-        "eslint-config": "./src/index.cjs"
+        "eslint-config": "./src/index.js"
     },
     "scripts": {
         "test": "mocha",
