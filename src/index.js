@@ -18,7 +18,7 @@ const exec = require("child_process").exec;
 // export default [...settings]
 
 const CONFIG_FILENAME = "eslint.config.mjs"
-const CONFIG_CONTENT = "import settings from \"@cionzo/eslint-config\"\nexport default [...settings]"
+const CONFIG_CONTENT = `import settings from "@cionzo/eslint-config/src/${CONFIG_FILENAME}"\nexport default [...settings]`
 
 if (require.main === module) {
     // Install ESLint and JSDoc as dev dependencies when executed.
