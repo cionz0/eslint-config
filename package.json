@@ -9,7 +9,7 @@
     "scripts": {
         "test": "mocha",
         "js-changelog": "npx @cionzo/js-changelog",
-        "lint": "eslint --fix"
+        "lint": "eslint --fix ."
     },
     "repository": {
         "type": "git",
@@ -30,9 +30,13 @@
     "install_from_git": "only",
     "devDependencies": {
         "@cionzo/js-changelog": "github:cionz0/js-changelog",
-        "@cionzo/package-json-to-readme": "github:cionz0/package-json-to-readme",
+        "@cionzo/package-json-to-readme": "github:cionz0/package-json-to-readme"
+    },
+    "dependencies": {
+        "@eslint/js": "^9.2.0",
         "eslint": "^9.2.0",
+        "eslint-config-google": "^0.14.0",
         "eslint-plugin-jsdoc": "^48.2.3",
-        "jsdoc": "^4.0.3"
+        "globals": "^15.1.0"
     }
 }
