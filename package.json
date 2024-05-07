@@ -2,6 +2,7 @@
     "name": "@cionzo/eslint-config",
     "version": "1.0.0",
     "description": "My eslint configuration",
+    "type": "module",
     "main": "src/index.js",
     "bin": {
         "eslint-config": "./src/index.js"
