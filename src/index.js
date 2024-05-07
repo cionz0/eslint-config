@@ -14,6 +14,7 @@
 
 const fs = require("fs");
 const exec = require("child_process").exec;
+
 // import settings from "./eslint.config.mjs"
 // export default [...settings]
 
