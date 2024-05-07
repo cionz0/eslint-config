@@ -20,7 +20,7 @@ This will:
 
 **Don't forget** to add `.eslint.js` to your project repository, for example by running the following from your `functions`folder. 
 ```bash
-git add .eslint.js
+git add eslint.config.js
 ```
 
 File `functions/package.json` will be updated as follows:
