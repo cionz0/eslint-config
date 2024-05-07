@@ -2,7 +2,6 @@
     "name": "@cionzo/eslint-config",
     "version": "1.0.0",
     "description": "My eslint configuration",
-    "type": "module",
     "main": "src/index.cjs",
     "bin": {
         "eslint-config": "./src/index.cjs"
